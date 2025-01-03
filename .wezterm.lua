@@ -15,6 +15,8 @@ config.window_decorations = "TITLE | RESIZE"
 -- config.window_background_opacity = 0.8
 -- config.macos_window_background_blur = 10
 
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+
 config.color_scheme = "Tokyo Night"
 
 config.initial_rows = 32
