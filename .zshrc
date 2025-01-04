@@ -110,8 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(dircolors $HOME./.dir_colors/dircolors)"
-eval `dircolors /home/tomand/.dir_colors/dircolors`
+# eval "$(dircolors $HOME./.dir_colors/dircolors)"
+# eval `dircolors /home/tomand/.dir_colors/dircolors`
+#
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"

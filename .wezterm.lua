@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 15
+config.font_size = 18
 
 config.enable_tab_bar = false
 
@@ -21,6 +21,8 @@ config.color_scheme = "Tokyo Night"
 
 config.initial_rows = 32
 config.initial_cols = 96
+
+config.window_close_confirmation = "NeverPrompt"
 
 -- my coolnight colorscheme:
 -- config.colors = {
