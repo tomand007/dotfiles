@@ -17,7 +17,7 @@ config.window_decorations = "TITLE | RESIZE"
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Catppuccin Mocha"
 
 config.initial_rows = 32
 config.initial_cols = 96
