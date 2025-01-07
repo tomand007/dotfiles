@@ -13,11 +13,11 @@ config.enable_tab_bar = false
 
 config.window_decorations = "TITLE | RESIZE"
 -- config.window_background_opacity = 0.8
--- config.macos_window_background_blur = 10
+-- config.macos_window_background_blur = 60
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.color_scheme = "OneDark (base16)"
+config.color_scheme = "Gruvbox dark, hard (base16)"
 
 config.initial_rows = 32
 config.initial_cols = 96
