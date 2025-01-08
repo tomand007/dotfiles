@@ -12,8 +12,8 @@ config.font_size = 16
 config.enable_tab_bar = false
 
 config.window_decorations = "TITLE | RESIZE"
--- config.window_background_opacity = 0.8
--- config.macos_window_background_blur = 60
+config.window_background_opacity = 0.60
+config.macos_window_background_blur = 60
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
