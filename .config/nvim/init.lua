@@ -848,29 +848,41 @@ require('lazy').setup({
     end,
   },
 
+  -- {
+  --   'sainnhe/gruvbox-material',
+  --   priority = 1000,
+  --   config = function()
+  --     -- Basic configuration
+  --     vim.opt.termguicolors = true -- Enable 24-bit RGB colors
+  --     vim.opt.background = 'dark' -- Set background to dark
+  --
+  --     -- Plugin specific settings
+  --     vim.g.gruvbox_material_better_performance = 1
+  --     vim.g.gruvbox_material_background = 'hard'
+  --     vim.g.gruvbox_material_foreground = 'material'
+  --     vim.g.gruvbox_material_enable_bold = 1
+  --     vim.g.gruvbox_material_enable_italic = 1
+  --     vim.g.gruvbox_material_transparent_background = 1
+  --     -- vim.g.gruvbox_material_visual = 'reverse'
+  --     -- vim.g.gruvbox_material_ui_contrast = 'high'
+  --
+  --     -- Load the colorscheme
+  --     vim.cmd.colorscheme 'gruvbox-material'
+  --   end,
+  -- },
   {
-    'sainnhe/gruvbox-material',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
     config = function()
-      -- Basic configuration
-      vim.opt.termguicolors = true -- Enable 24-bit RGB colors
-      vim.opt.background = 'dark' -- Set background to dark
+      require('catppuccin').setup {
+        flavour = 'mocha',
+        no_italic = true, -- This is all you need to disable italics
+      }
 
-      -- Plugin specific settings
-      vim.g.gruvbox_material_better_performance = 1
-      vim.g.gruvbox_material_background = 'hard'
-      vim.g.gruvbox_material_foreground = 'material'
-      vim.g.gruvbox_material_enable_bold = 1
-      vim.g.gruvbox_material_enable_italic = 1
-      vim.g.gruvbox_material_transparent_background = 1
-      -- vim.g.gruvbox_material_visual = 'reverse'
-      -- vim.g.gruvbox_material_ui_contrast = 'high'
-
-      -- Load the colorscheme
-      vim.cmd.colorscheme 'gruvbox-material'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
-
   -- { -- You can easily change to a different colorscheme.
   --   -- Change the name of the colorscheme plugin below, and then
   --   -- change the command in the config to whatever the name of that colorscheme is.
