@@ -167,3 +167,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# # Settings for interactive shells with a TTY attached
+# if [[ -t 0 ]]; then
+#   # Disable Ctrl+S/Ctrl+Q flow control only if stdin is a terminal
+#   stty -ixon
+#   # Remove bindings only if stdin is a terminal (optional but safe)
+#   bindkey -r "^S"
+#   bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
+# fi
+
+
+bindkey -r "^S"
+bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
