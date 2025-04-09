@@ -4,3 +4,5 @@ test.sh
 
 spell/
 *.DS_Store
+
+./.config/tmux/plugins/
