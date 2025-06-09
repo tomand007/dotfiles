@@ -133,7 +133,7 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-alias ls='eza --icons=always'
+alias ls='eza -la --icons=always'
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
@@ -180,3 +180,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 bindkey -r "^S"
 bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
+
+alias cursor="$HOME/apps/cursor"
+
+alias kubectl="minikube kubectl --"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
