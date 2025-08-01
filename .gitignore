@@ -5,5 +5,6 @@ test.sh
 spell/
 *.DS_Store
 
+.config/nvim/.github/
 .config/tmux/plugins/*
 

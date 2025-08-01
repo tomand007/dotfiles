@@ -113,9 +113,6 @@ source $ZSH/oh-my-zsh.sh
 # eval "$(dircolors $HOME./.dir_colors/dircolors)"
 # eval `dircolors /home/tomand/.dir_colors/dircolors`
 #
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -188,3 +185,7 @@ alias kubectl="minikube kubectl --"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
+
+alias python=python3
