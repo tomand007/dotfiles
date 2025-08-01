@@ -877,6 +877,7 @@ require('lazy').setup({
     config = function()
       require('catppuccin').setup {
         flavour = 'mocha',
+        transparent_background = true,
         no_italic = true, -- This is all you need to disable italics
       }
 

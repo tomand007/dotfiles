@@ -6,4 +6,4 @@ spell/
 *.DS_Store
 
 .config/tmux/plugins/*
-
+.config/uv/
