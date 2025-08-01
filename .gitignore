@@ -7,4 +7,4 @@ spell/
 
 .config/nvim/.github/
 .config/tmux/plugins/*
-
+.config/uv/
