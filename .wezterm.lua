@@ -12,12 +12,12 @@ config.font_size = 17
 config.enable_tab_bar = false
 
 config.window_decorations = "TITLE | RESIZE"
-config.window_background_opacity = 0.70
-config.macos_window_background_blur = 80
+-- config.window_background_opacity = 0.70
+-- config.macos_window_background_blur = 80
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Gruvbox Dark (Gogh)"
 
 config.initial_rows = 32
 config.initial_cols = 96
