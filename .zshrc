@@ -178,11 +178,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 bindkey -r "^S"
 bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
 
-alias cursor="$HOME/apps/cursor"
-
-alias kubectl="minikube kubectl --"
-
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda/bin:$PATH
-
 alias python=python3
+export PATH="$PATH:/Users/tomasz.andrzejewski@iqvia.com/Library/Application Support/Coursier/bin"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

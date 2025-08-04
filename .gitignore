@@ -8,3 +8,5 @@ spell/
 .config/nvim/.github/
 .config/tmux/plugins/*
 .config/uv/
+.config/github-copilot/
+.config/btop/
