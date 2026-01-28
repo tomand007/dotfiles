@@ -132,10 +132,6 @@ bindkey '^[[B' history-search-forward
 
 alias ls='eza -la --icons=always'
 
-# ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
-
-alias cd="z"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -178,11 +174,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 bindkey -r "^S"
 bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
 
-alias cursor="$HOME/apps/cursor"
+# set vi-mode
+set -o vi
 
-alias kubectl="minikube kubectl --"
-
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda/bin:$PATH
-
-alias python=python3
