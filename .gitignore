@@ -8,3 +8,13 @@ spell/
 .config/nvim/.github/
 .config/tmux/plugins/*
 .config/uv/
+
+# ~/.config is stowed onto this repo, so every tool writes its state and
+# credentials straight into the working tree
+.config/gcloud/
+.config/finitec/
+.config/jira.env
+.config/configstore/
+.config/browser-harness/
+.config/browseruse/
+.config/cagent/

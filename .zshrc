@@ -172,8 +172,51 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 
 bindkey -r "^S"
-bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
+# bindkey -r "^R"
 
 # set vi-mode
 set -o vi
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tomand/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tomand/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tomand/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tomand/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# --- Claude Code: three subscriptions on one machine ---
+# The personal seat must run with CLAUDE_CONFIG_DIR unset: the Keychain entry is
+# named "Claude Code-credentials-<sha256(config_dir)[0:8]>" and the hash suffix is
+# added whenever the variable is set, so pointing it at the default ~/.claude
+# still produces a different entry and looks like a logout.
+CLAUDE_DIR_FINI="$HOME/.claude-finitec"
+CLAUDE_DIR_LPP="$HOME/.claude-lpp"
+
+claude() {
+  if [[ -n "$CLAUDE_CONFIG_DIR" ]]; then
+    command claude "$@"
+    return
+  fi
+  case "$PWD/" in
+    "$HOME"/work/finitec/*) CLAUDE_CONFIG_DIR="$CLAUDE_DIR_FINI" command claude "$@" ;;
+    "$HOME"/work/kempuri/*) CLAUDE_CONFIG_DIR="$CLAUDE_DIR_LPP" command claude "$@" ;;
+    *)                      command claude "$@" ;;
+  esac
+}
+
+cmax() { env -u CLAUDE_CONFIG_DIR claude "$@" }
+
+cfini() { CLAUDE_CONFIG_DIR="$CLAUDE_DIR_FINI" command claude "$@" }
+
+clpp() { CLAUDE_CONFIG_DIR="$CLAUDE_DIR_LPP" command claude "$@" }
+
+claude-who() {
+  local fmt='if .loggedIn then "\(.email) [\(.subscriptionType)] \(.orgName)" else "logged out" end'
+  printf '%-22s %s\n' '~/.claude' \
+    "$(env -u CLAUDE_CONFIG_DIR claude auth status --json 2>/dev/null | jq -r "$fmt")"
+  printf '%-22s %s\n' '~/.claude-finitec' \
+    "$(CLAUDE_CONFIG_DIR="$CLAUDE_DIR_FINI" command claude auth status --json 2>/dev/null | jq -r "$fmt")"
+  printf '%-22s %s\n' '~/.claude-lpp' \
+    "$(CLAUDE_CONFIG_DIR="$CLAUDE_DIR_LPP" command claude auth status --json 2>/dev/null | jq -r "$fmt")"
+}
 
