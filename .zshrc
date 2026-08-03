@@ -177,3 +177,9 @@ bindkey -r "^R" # Keep this only if you intentionally want Ctrl+R disabled
 # set vi-mode
 set -o vi
 
+# Claude Code: pick the subscription seat from the working directory
+source ~/code/repos/agentic-coding/shell/claude-accounts.zsh
+
+# GitHub CLI: pick the account from the working directory
+source ~/code/repos/agentic-coding/shell/gh-accounts.zsh
+
