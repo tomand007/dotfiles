@@ -887,6 +887,8 @@ require('lazy').setup({
     config = function()
       -- -@diagnostic disable-next-line: missing-fields
       require('gruvbox').setup {
+        -- empty contrast is medium; 'hard' and 'soft' are the other two
+        contrast = '',
         italic = {
           strings = false,
           emphasis = false,

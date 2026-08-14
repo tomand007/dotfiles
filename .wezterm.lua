@@ -9,6 +9,26 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 17
 
+-- No italics: map every italic request back onto the upright face. One rule per
+-- intensity, otherwise wezterm falls back to its own rule and synthesizes a slant.
+config.font_rules = {
+	{
+		italic = true,
+		intensity = "Bold",
+		font = wezterm.font("FiraCode Nerd Font", { weight = "Bold", italic = false }),
+	},
+	{
+		italic = true,
+		intensity = "Half",
+		font = wezterm.font("FiraCode Nerd Font", { weight = "Light", italic = false }),
+	},
+	{
+		italic = true,
+		intensity = "Normal",
+		font = wezterm.font("FiraCode Nerd Font", { italic = false }),
+	},
+}
+
 config.enable_tab_bar = false
 
 config.window_decorations = "TITLE | RESIZE"
