@@ -1,0 +1,37 @@
+theme = Gruvbox Dark
+
+font-family = FiraCode Nerd Font
+font-size = 17
+
+# Ligatures off, same as harfbuzz_features = calt=0, clig=0, liga=0
+font-feature = -calt
+font-feature = -clig
+font-feature = -liga
+
+# No italics anywhere: never pick an italic face, and never fake one by slanting
+font-style-italic = false
+font-style-bold-italic = false
+font-synthetic-style = bold,no-italic,no-bold-italic
+
+# Steady block cursor, like wezterm's default. no-cursor stops the shell
+# integration from switching to a bar cursor at the prompt.
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor,sudo,title,ssh-env
+
+# Window
+window-width = 96
+window-height = 32
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+macos-titlebar-style = transparent
+confirm-close-surface = false
+window-save-state = never
+
+# Left option sends Alt/Meta, right option still composes Polish characters
+macos-option-as-alt = left
+
+# Let nvim/tmux read the clipboard over OSC 52 without a prompt
+clipboard-read = allow
+mouse-hide-while-typing = true
