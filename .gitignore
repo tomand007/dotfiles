@@ -18,3 +18,5 @@ spell/
 .config/browser-harness/
 .config/browseruse/
 .config/cagent/
+.config/herdr/*
+!.config/herdr/config.toml
