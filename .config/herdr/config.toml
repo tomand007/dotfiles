@@ -1,0 +1,33 @@
+onboarding = false
+# Only values that differ from `herdr --default-config`.
+
+[theme]
+# Built-in gruvbox is dark medium with the exact hexes (#282828 / #ebdbb2),
+# unlike the tmux plugin which needed 'dark' to avoid the 256-colour approximation.
+name = "gruvbox"
+
+[keys]
+prefix = "ctrl+s"
+# One workspace per project, so switching clients has to be a single chord.
+switch_workspace = "prefix+shift+1..9"
+
+[session]
+# The reason for running herdr at all: after a reboot the restored Claude Code
+# panes come back on their own conversations, not on a fresh `claude`.
+resume_agents_on_restore = true
+
+[ui]
+# Surface whichever agent is blocked on a question, instead of a static project list.
+agent_panel_sort = "spaces"
+
+show_agent_labels_on_pane_borders = false
+[ui.toast]
+delivery = "system"
+
+[ui.sound]
+enabled = true
+
+# [experimental]
+# Restores pane scrollback across restarts, at the price of writing terminal
+# output (secrets included) to session-history.json.
+# pane_history = true
