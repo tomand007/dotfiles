@@ -1,3 +1,4 @@
+onboarding = false
 # Only values that differ from `herdr --default-config`.
 
 [theme]
