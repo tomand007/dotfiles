@@ -189,3 +189,8 @@ if [ -f '/Users/tomand/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 # falls back to the personal subscription.
 source "$HOME/code/repos/agentic-coding/shell/claude-accounts.zsh"
 
+
+# --- herdr: agent/session overview ---
+# Defines hagents. Shows which pane holds which conversation and which panes
+# would not survive a server restart.
+source "$HOME/.config/zsh/herdr.zsh"
