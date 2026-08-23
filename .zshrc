@@ -183,3 +183,8 @@ source ~/code/repos/agentic-coding/shell/claude-accounts.zsh
 # GitHub CLI: pick the account from the working directory
 source ~/code/repos/agentic-coding/shell/gh-accounts.zsh
 
+
+# --- herdr: agent/session overview ---
+# Defines hagents. Shows which pane holds which conversation and which panes
+# would not survive a server restart.
+source "$HOME/.config/zsh/herdr.zsh"
