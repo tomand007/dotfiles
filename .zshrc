@@ -220,3 +220,8 @@ claude-who() {
     "$(CLAUDE_CONFIG_DIR="$CLAUDE_DIR_LPP" command claude auth status --json 2>/dev/null | jq -r "$fmt")"
 }
 
+
+# --- herdr: agent/session overview ---
+# Defines hagents. Shows which pane holds which conversation and which panes
+# would not survive a server restart.
+source "$HOME/.config/zsh/herdr.zsh"
