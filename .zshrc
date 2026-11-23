@@ -161,6 +161,12 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# SDL apps (sdl-freerdp) otherwise hold a display-sleep assertion for as long as they run.
+export SDL_VIDEO_ALLOW_SCREENSAVER=1
+
+# RDP to the Beelink desktop; Virtual Machine Manager there shows the client VMs' consoles.
+alias beelink-rdp='sdl-freerdp /v:tomand-beelink /u:tomand /sec:nla /cert:tofu /from-stdin /dynamic-resolution /scale-desktop:200'
+
 # # Settings for interactive shells with a TTY attached
 # if [[ -t 0 ]]; then
 #   # Disable Ctrl+S/Ctrl+Q flow control only if stdin is a terminal
